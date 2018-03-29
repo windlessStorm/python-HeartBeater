@@ -30,8 +30,7 @@ import socket
 import struct
 import sys
 import time
-import heartbeater.multicast.event
-
+import event as event
 
 class HBSender(threading.Thread):
 
@@ -50,7 +49,7 @@ class HBSender(threading.Thread):
         self.status = status
         self.timeout = timeout
         self.packet_destination = (multicast_group, udp_port)
-        self.event_generator = heartbeater.multicast.event.EventGenerator(softwareID, status, interface_ip)
+        self.event_generator = event.EventGenerator(softwareID, status, interface_ip)
 
 
     def _init_socket(self):

@@ -78,7 +78,7 @@ class EventGenerator(object):
         self.softwareID = softwareID
         self.status = status
         self.source_address = source_address
-
+	print "Creating an event from source: {}".format( self.source_address)
 
     def new_event(self):
         return Event(self.softwareID, self.status.to_string(), self.source_address)

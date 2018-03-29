@@ -46,9 +46,9 @@ def start_electing():
 
 hb = heartbeater.HeartBeater(
         softwareID = 'AppID',
-        multicast_group = '239.0.0.2',
+        multicast_group = '224.0.0.1',
         udp_port = 2017,
-        interface_ip = '127.0.0.1',
+        interface_ip = '10.198.3.48',
         become_master_callback = become_master,
         become_slave_callback = become_slave,
         start_electing_callback = start_electing

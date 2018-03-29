@@ -58,7 +58,7 @@ class Event(object):
             })
 
     def to_bytes(self):
-        return bytes( self.to_string(), charset )
+        return bytes( self.to_string() )
 
     def is_local_to(self, softwareID, source_address):
         return (

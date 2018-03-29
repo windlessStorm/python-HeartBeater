@@ -27,8 +27,8 @@
 #
 
 import threading
-from heartbeater import hbstatus
-from heartbeater.multicast import hbsender, hbwatcher
+import hbstatus
+import multicast.hbsender as hbsender, multicast.hbwatcher as hbwatcher
 import time
 
 

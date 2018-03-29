@@ -105,6 +105,7 @@ class HBWatcher(threading.Thread):
 
         while (self.keep_going):
             debug('Watcher LOOP')
+	    time.sleep(1)
 
             try:
                 data, address = sock.recvfrom(4096)
